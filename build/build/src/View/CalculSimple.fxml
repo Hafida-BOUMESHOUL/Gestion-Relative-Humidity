@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1200.0" styleClass="myAnchorPane" stylesheets="@calcul.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CalculSimpleController">
+   <children>
+      <TextField fx:id="secCS" layoutX="387.0" layoutY="183.0" prefHeight="36.0" prefWidth="164.0" promptText="Sec" styleClass="myField">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="mouCS" layoutX="606.0" layoutY="181.0" prefHeight="36.0" prefWidth="164.0" promptText="Mouillé" styleClass="myField">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="humCS" layoutX="606.0" layoutY="258.0" prefHeight="36.0" prefWidth="164.0" promptText="Air Humide" styleClass="myField">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Button fx:id="calculerCS" layoutX="385.0" layoutY="257.0" mnemonicParsing="false" onAction="#calculerRH" prefHeight="43.0" prefWidth="168.0" styleClass="myButton2" text="Calculer" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Pane prefHeight="640.0" prefWidth="230.0" styleClass="myPane" stylesheets="@Home.css">
+         <children>
+            <Button fx:id="TabBord" layoutX="36.0" layoutY="162.0" mnemonicParsing="false" onAction="#goHome" prefHeight="46.0" prefWidth="219.0" styleClass="myButton" stylesheets="@Home.css" text="Tableau de Bord   ">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="humRel" layoutX="36.0" layoutY="215.0" mnemonicParsing="false" onAction="#goRH" prefHeight="46.0" prefWidth="219.0" styleClass="myButton" stylesheets="@Home.css" text="Humidite relative  ">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="CS" layoutX="36.0" layoutY="269.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="219.0" styleClass="myButton" stylesheets="@Home.css" text="Calcul Simple">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="imprimer" layoutX="36.0" layoutY="323.0" mnemonicParsing="false" onAction="#goPrint" prefHeight="30.0" prefWidth="219.0" styleClass="myButton" stylesheets="@Home.css" text="Imprimer bulletin  ">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="107.0" fitWidth="230.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ressources/logoAgence.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="590.0" prefHeight="17.0" prefWidth="228.0" text="COPYRIGHT © 2021 ABHGZR">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1200.0" styleClass="myAnchorPane" stylesheets="@Home.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomeController">
+   <children>
+      <Pane prefHeight="640.0" prefWidth="230.0" styleClass="myPane" stylesheets="@Home.css">
+         <children>
+            <Button fx:id="TabBord" layoutX="36.0" layoutY="162.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="219.0" styleClass="myButton" stylesheets="@Home.css" text="Tableau de Bord   ">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="humRel" layoutX="36.0" layoutY="215.0" mnemonicParsing="false" onAction="#goRH" prefHeight="46.0" prefWidth="219.0" styleClass="myButton" stylesheets="@Home.css" text="Humidite relative  ">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="CS" layoutX="36.0" layoutY="269.0" mnemonicParsing="false" onAction="#goCS" prefHeight="39.0" prefWidth="219.0" styleClass="myButton" stylesheets="@Home.css" text="Calcul Simple">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="imprimer" layoutX="36.0" layoutY="323.0" mnemonicParsing="false" onAction="#goPrint" prefHeight="30.0" prefWidth="219.0" styleClass="myButton" stylesheets="@Home.css" text="Imprimer bulletin  ">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="107.0" fitWidth="230.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ressources/logoAgence.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="590.0" prefHeight="17.0" prefWidth="228.0" text="COPYRIGHT © 2021 ABHGZR">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="nomBassin" layoutX="371.0" layoutY="105.0" prefHeight="39.0" prefWidth="171.0" styleClass="myField" stylesheets="@Home.css" />
+      <TextField fx:id="nomObservateur" layoutX="951.0" layoutY="108.0" prefHeight="39.0" prefWidth="171.0" styleClass="myField" stylesheets="@Home.css" />
+      <TextField fx:id="nomStation" layoutX="662.0" layoutY="107.0" prefHeight="39.0" prefWidth="171.0" styleClass="myField" stylesheets="@Home.css" />
+      <Label fx:id="idB" layoutX="308.0" layoutY="108.0" prefHeight="30.0" prefWidth="41.0" text="idB" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="idO" layoutX="898.0" layoutY="113.0" prefHeight="30.0" prefWidth="41.0" text="idO" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="idS" layoutX="602.0" layoutY="110.0" prefHeight="30.0" prefWidth="41.0" text="idS" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="371.0" layoutY="66.0" prefHeight="30.0" prefWidth="171.0" text="Bassin">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="661.0" layoutY="63.0" prefHeight="30.0" prefWidth="171.0" text="Station">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="950.0" layoutY="62.0" prefHeight="30.0" prefWidth="171.0" text="Observateur : ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="bassinTable" layoutX="350.0" layoutY="231.0" onMouseClicked="#BassinMouseAction" prefHeight="371.0" prefWidth="219.0">
+        <columns>
+          <TableColumn fx:id="idBassin" prefWidth="75.0" style="-fx-background-color: #4ae4ff;" text="Id Bassin" visible="false" />
+          <TableColumn fx:id="nomBTable" prefWidth="216.0" text="Nom Du  Bassin" />
+        </columns>
+      </TableView>
+      <TableView fx:id="stationTable" layoutX="638.0" layoutY="231.0" onMouseClicked="#StationMouseAction" prefHeight="371.0" prefWidth="219.0">
+         <columns>
+            <TableColumn fx:id="idStation" prefWidth="75.0" style="-fx-background-color: #4ae4ff;" text="Id Station" visible="false" />
+            <TableColumn fx:id="nomSTable" prefWidth="217.33331298828125" text="Nom De La station" />
+         </columns>
+      </TableView>
+      <TableView fx:id="observateurTable" layoutX="926.0" layoutY="231.0" onMouseClicked="#ObservateurMouseAction" prefHeight="371.0" prefWidth="219.0">
+         <columns>
+            <TableColumn fx:id="idObservateur" prefWidth="88.66668701171875" style="-fx-background-color: #4ae4ff;" text="id Observateur" visible="false" />
+            <TableColumn fx:id="nomOTable" prefWidth="216.00006103515625" text="Nom De l'Observateur" />
+         </columns>
+      </TableView>
+      <Button fx:id="ajouterBas" layoutX="351.0" layoutY="151.0" mnemonicParsing="false" onAction="#ajouterBassin" prefHeight="25.0" prefWidth="103.0" styleClass="myButton2" stylesheets="@Home.css" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="supprimerBas" layoutX="460.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleDeleteBassin" prefHeight="25.0" prefWidth="103.0" styleClass="myButton2" stylesheets="@Home.css" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="modifierBas" layoutX="351.0" layoutY="186.0" mnemonicParsing="false" onAction="#modifierBassin" prefHeight="25.0" prefWidth="103.0" styleClass="myButton2" stylesheets="@Home.css" text="Modifier" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="rechercherBas" layoutX="460.0" layoutY="186.0" mnemonicParsing="false" onAction="#handleSearchBassin" prefHeight="25.0" prefWidth="103.0" styleClass="myButton2" stylesheets="@Home.css" text="Rechercher" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ajouterStat" layoutX="642.0" layoutY="152.0" mnemonicParsing="false" onAction="#ajouterStation" prefHeight="25.0" prefWidth="103.0" styleClass="myButton2" stylesheets="@Home.css" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="supprimerStat" layoutX="751.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleDeleteStation" prefHeight="25.0" prefWidth="103.0" styleClass="myButton2" stylesheets="@Home.css" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="modifierStat" layoutX="642.0" layoutY="187.0" mnemonicParsing="false" onAction="#modifierStation" prefHeight="25.0" prefWidth="103.0" styleClass="myButton2" stylesheets="@Home.css" text="Modifier" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="rechercherStat" layoutX="751.0" layoutY="187.0" mnemonicParsing="false" onAction="#handleSearchStation" prefHeight="25.0" prefWidth="103.0" styleClass="myButton2" stylesheets="@Home.css" text="Rechercher" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ajouterObs" layoutX="929.0" layoutY="153.0" mnemonicParsing="false" onAction="#ajouterObservateur" prefHeight="25.0" prefWidth="103.0" styleClass="myButton2" stylesheets="@Home.css" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="supprimerObs" layoutX="1038.0" layoutY="153.0" mnemonicParsing="false" onAction="#handleDeleteObservateur" prefHeight="25.0" prefWidth="103.0" styleClass="myButton2" stylesheets="@Home.css" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="modifierObs" layoutX="929.0" layoutY="188.0" mnemonicParsing="false" onAction="#modifierObservateur" prefHeight="25.0" prefWidth="103.0" styleClass="myButton2" stylesheets="@Home.css" text="Modifier" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="rechercherObs" layoutX="1038.0" layoutY="188.0" mnemonicParsing="false" onAction="#handleSearchObservateur" prefHeight="25.0" prefWidth="103.0" styleClass="myButton2" stylesheets="@Home.css" text="Rechercher" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+.myPane{
+    -fx-background-color:rgb(5, 168, 73);
+}
+.myAnchorPane{
+    -fx-background-color: rgb(219, 223, 220);
+}
+.myButton{
+    -fx-background-radius: 20px;
+    -fx-background-color: rgb(219, 223, 220);
+    -fx-font-style: normal;
+}
+.myButton2{
+    -fx-background-radius: 20px;
+    -fx-background-color: rgb(5, 51, 136);
+    -fx-font-style: normal;
+}
+.myField{
+    -fx-background-radius: 20px;
+}
+.myAnchorPane{
+    -fx-background-radius: 20px;
+}

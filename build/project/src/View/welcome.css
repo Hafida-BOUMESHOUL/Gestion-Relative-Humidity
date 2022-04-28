@@ -1,0 +1,21 @@
+.myPane{
+    -fx-background-color:rgb(5, 168, 73);
+}
+.myAnchorPane{
+    -fx-background-color: rgb(219, 223, 220);
+    -fx-background-radius: 20px;
+}
+.myButton{
+    -fx-background-radius: 20px;
+    -fx-background-color: rgb(219, 223, 220);
+    -fx-font-style: normal;
+}
+.myLabel{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: #D35400;
+}
+.myButton2{
+    -fx-background-radius: 20px;
+    -fx-background-color: rgb(5, 51, 136);
+    -fx-font-style: normal;
+}

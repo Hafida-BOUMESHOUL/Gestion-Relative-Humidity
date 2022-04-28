@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="850.0" styleClass="myAnchorPane" stylesheets="@Home.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.aboutController">
+   <children>
+      <ImageView fitHeight="179.0" fitWidth="144.0" layoutX="34.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ressources/1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="31.0" layoutY="457.0" text="Hafida BOUMESHOUL">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="196.0" layoutY="319.0" prefHeight="57.0" prefWidth="327.0" text="Etudiante a l'École Nationale des Sciences Appliquées d'Oujda" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="531.0" layoutY="279.0" prefHeight="25.0" prefWidth="90.0" text="Contacts :" textFill="#0015ff" underline="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="589.0" layoutY="352.0" prefHeight="25.0" prefWidth="230.0" text="hafida.boumeshoul@gmail.com">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="592.0" layoutY="325.0" prefHeight="25.0" prefWidth="90.0" text="0605035660">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="589.0" layoutY="383.0" prefHeight="25.0" prefWidth="181.0" text="Hafida BOUMESHOUL">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="589.0" layoutY="415.0" prefHeight="25.0" prefWidth="167.0" text="Hafida-BOUMESHOUL">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="26.0" fitWidth="23.0" layoutX="540.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ressources/tel.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="540.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ressources/linkedin.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="23.0" layoutX="540.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ressources/email.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="43.0" layoutX="530.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ressources/GitHub-Logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="197.0" layoutY="283.0" prefHeight="26.0" prefWidth="197.0" text="Informations du créateur" textFill="#0015ff" underline="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="196.0" layoutY="371.0" prefHeight="36.0" prefWidth="327.0" text="Filière: Génie informatique" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="53.0" prefHeight="26.0" prefWidth="239.0" text="Informations sur l'application" textFill="#0015ff" underline="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Text layoutX="88.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L’application de la gestion de l’humidité relative est une application permettant aux employés de l’agence du bassin Hydrolique guir ziz gheris de gerer les bassins, leurs stations, et leurs observateurs, caluler l’humidité relative, de chaque station pour chaque heure (7h, 14h, 18h, 21h) de chaque jour, et imprimer le relevé de l’humidité relative pour chaque mois." wrappingWidth="548.8033256530762">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
